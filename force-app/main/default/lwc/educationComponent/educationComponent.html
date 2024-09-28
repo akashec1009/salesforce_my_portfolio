@@ -1,0 +1,12 @@
+<template>
+    <section class="education">
+        <h2>Education</h2>
+        <template for:each={educations} for:item="education">
+            <div key={education.id} class="education-item">
+                <h3>{education.degree}</h3>
+                <h4>{education.institution} | {education.duration}</h4>
+                <p>{education.description}</p>
+            </div>
+        </template>
+    </section>
+</template>

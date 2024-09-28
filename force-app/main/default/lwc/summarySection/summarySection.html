@@ -1,0 +1,29 @@
+<template>
+    <section class="summary">
+        <div class="summary-container">
+            <!-- Left Side: Skill Progress Bars -->
+            <div class="skills-section">
+                <template for:each={skills} for:item="skill">
+                    <div key={skill.name} class="skill">
+                        <p>{skill.name}</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: {skill.proficiency};"></div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Right Side: Objective Statement -->
+            <div class="objective-section">
+                <h2>About Me</h2>
+                <p>
+                    A Salesforce Developer with more than 3 years of experience in designing, developing, and implementing customized
+                    solutions on the Salesforce platform. Proficient in Apex, trigger, and Lightning components, with a strong
+                    understanding of Salesforce best practices and limitations. Demonstrated ability to troubleshoot and resolve
+                    issues, collaborate with cross-functional teams, and deliver projects on time and within scope. I am seeking
+                    new opportunities to further develop my skills and contribute to the success of a dynamic organization.
+                </p>
+            </div>
+        </div>
+    </section>
+</template>

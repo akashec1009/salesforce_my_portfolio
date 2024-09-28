@@ -1,0 +1,65 @@
+/* General Styling for the Summary Section */
+.summary {
+    padding: 2rem;
+    background-color: #000; /* Black Background */
+    color: #f5f5f5; /* Light text color for contrast */
+}
+
+.summary-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.skills-section, .objective-section {
+    text-align: center;
+    width: 50%;
+}
+
+.skills-section h2, .objective-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f5f5f5; /* Ensure header is also light */
+}
+
+/* Progress Bar Styling */
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #f5f5f5; /* Light text for skill names */
+}
+
+.progress-bar {
+    background-color: #ffffff; /* Dark gray for progress bar background */
+    border-radius: 20px;
+    overflow: hidden;
+    height: 15px;
+    width: 100%;
+}
+
+.progress-fill {
+    background-color: #4caf50; /* Green for filled progress */
+    height: 100%;
+    border-radius: 20px;
+    transition: width 3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .summary-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-section, .objective-section {
+        width: 100%;
+    }
+
+    .skills-section h2, .objective-section h2 {
+        font-size: 1.5rem;
+    }
+}

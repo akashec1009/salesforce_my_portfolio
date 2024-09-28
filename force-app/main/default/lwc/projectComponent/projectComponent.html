@@ -1,0 +1,23 @@
+<template>
+    <div class="main">
+        <div class="headline"><h2>Projects</h2></div>
+    <div class="card-container">  
+        
+        <template for:each={projects} for:item="project">
+            <div class="card" key={project.id}>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>{project.name}</h3>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                        <p>{project.description}</p>
+                        <p>{project.technology}</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</div>
+</template>

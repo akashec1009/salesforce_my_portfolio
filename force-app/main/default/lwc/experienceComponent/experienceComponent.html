@@ -1,0 +1,38 @@
+<template>
+    <section class="experience">
+        <h2>Experience</h2>
+        <template for:each={experiences} for:item="experience">
+            <div key={experience.id} class="experience-item">
+                <h3>{experience.jobTitle}</h3>
+                <h3>{experience.company} | {experience.duration}</h3>
+                
+                    <ul><h4>
+                        <li> &#8226; Apex Development: Design, develop, and maintain Apex code to implement 
+                            custom business logic, including triggers, classes, batch processes, lwc, and scheduled 
+                            jobs.</li>
+
+                        <li> &#8226; SOQL and DML Operations: Write efficient SOQL queries and DML operations to 
+                           retrieve and manipulate data within the salesforce platform, ensuring data 
+                           integrity and performance.</li>
+
+                        <li>&#8226; Testing and Debugging: Perform thorough unit testing of Apex code using 
+                            Salesforce-provided testing frameworks, and debug and troubleshoot issues to 
+                            identify root causes and implement effective solutions.</li>
+
+                        <li>&#8226; Develop and maintain asynchronous Apex solutions, including future methods, 
+                           queueable jobs, batch processes, and platform events, to handle background 
+                           processing and long-running operations.</li>
+                           
+                        <li>&#8226; Ensure compliance with Salesforce governor limits and best practices for code 
+                           bulkification, optimizing performance and scalability.</li>
+
+                        <li>&#8226; Proficient in developing and implementing Aura components for customizing 
+                           user interfaces within the Salesforce platform.</li>
+                        
+                        <li>&#8226; Provide technical guidance and support to administrators, and end users, 
+                           promoting knowledge sharing and skill development within the team.</li></h4>
+                    </ul>
+            </div>
+        </template>
+    </section>
+</template>

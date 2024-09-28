@@ -1,0 +1,127 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000; 
+    color: white;
+}
+
+.navbar-list {
+    
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/* Navbar Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-list {
+        
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .navbar-expanded .navbar-list {
+        
+        display: flex;
+        background-color: #000;
+        padding: 1rem;
+    }
+
+    .navbar-toggle {
+        display: block;
+        position: absolute;
+        left: 1rem; /* Toggle on the left side for mobile */
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    background-color: #000; 
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10%;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    /* Hero Image comes first on mobile */
+    .hero-image {
+        order: 1;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content {
+        order: 2;
+        max-width: 100%;
+    }
+}
+.fixed-button {
+    position: fixed; 
+    right: 20px;
+    bottom: 20px; 
+    padding: 10px 15px; 
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    z-index: 1000;
+    transition: background-color 0.3s; 
+}
+
+.fixed-button:hover {
+    background-color: #0056b3; 
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+    .fixed-button {
+        right: 10px; 
+        bottom: 15px; 
+        padding: 8px 12px; 
+        font-size: 14px; 
+    }
+}

@@ -1,0 +1,62 @@
+<template>
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar">
+            <div class={navbarClass}>
+                <ul class="navbar-list">
+                    <li><a href="#home-section">Home</a></li>
+                    <li><a href="#skill-section">Skill</a></li>
+                    <li><a href="#projects-section">Project</a></li>
+                    <li><a href="#education-section">Education</a></li>
+                    <li><a href="#experience-section">Experience</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </div>
+            <button class="navbar-toggle" onclick={toggleNavbar}>
+                <lightning-icon icon-name="utility:apps" alternative-text="Menu"></lightning-icon>
+            </button>
+        </nav>
+    </header>
+        <!-- Hero Section -->
+    <section class="hero">
+            <div class="hero-image">
+                <img src= {heroImageUrl} alt="Hero Image"/>
+            </div>
+            <div class="hero-content">
+                <h1>{name}</h1>
+                <p>Email: <a href="mailto:{email}">{email}</a></p>
+                <p>Phone: {phone}</p>
+                <p>Location: {location}</p>
+                <p>GitHub: <a href = "{github}">{github}</a></p>
+                <p>Linkedin: <a href= "{Linkedin}">{Linkedin}</a></p>
+                <lightning-button label="Resume" onclick={downloadPdf}></lightning-button>
+            </div>
+    </section>
+    <!-- calling other component in portfolio component -->
+    <section id = "summary-section">
+        <c-summary-section></c-summary-section>
+    </section>
+
+    <section id="experience-section">
+        <c-experience-component></c-experience-component> 
+    </section>
+    
+    <section id="skill-section">
+        <c-skill-component-with-flip></c-skill-component-with-flip>
+    </section>
+
+    <section id="projects-section">
+        <c-project-component></c-project-component> 
+    </section>
+
+    <section id="education-section">
+        <c-education-component></c-education-component> 
+    </section>
+
+    <section id="contact-section">
+        <c-footer-component></c-footer-component> 
+    </section>    
+    
+    <!-- Scroll button to scroll on top of the page-->
+    <button class="fixed-button" onclick={scrollToTop}>Scroll to Top</button>
+</template>
